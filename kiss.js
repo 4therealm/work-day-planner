@@ -12,7 +12,7 @@ let today = dayjs()
 let hour = dayjs().hour()
 var time = dayjs().format('h:mm:ss');
 
-$('#currentDay').text(`${time}`)
+$('#currentDay').text(today)
 
 timeBlockElements.forEach(element => {
   const elementKey = element.id
