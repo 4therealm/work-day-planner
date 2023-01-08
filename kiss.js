@@ -22,10 +22,17 @@ timeBlockElements.forEach(element => {
   
   const savedData = localStorage.getItem ( elementKey )  || []; 
   elementText.text(savedData)
-
-  console.log(elementTime == hour)
-  // console.log(elementText)
-  // console.log(savedData)
+if (elementTime < hour) {
+  $(this).attr('class', 'past')
+  console.log('past')
+  }else if(elementTime > hour){
+    console.log('future')
+    $(this).attr('class', 'future')
+    console.log('future')
+  }else{
+    console.log('present')
+    $(this).attr('class', 'present')
+  }
 })
 
 
