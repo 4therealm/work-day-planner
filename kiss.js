@@ -2,15 +2,9 @@ $(function (){
 const rootElement = $('.container-fluid') 
 const timeBlockElements = Array.from(rootElement.children()) 
 
-
-
-
-
-
-
 let today = dayjs()
 let hour = dayjs().hour()
-var time = dayjs().format('h:mm:ss');
+let time = dayjs().format('h:mm:ss');
 
 $('#currentDay').text(today)
 
@@ -22,20 +16,14 @@ timeBlockElements.forEach(element => {
   elementText.text(savedData)
 if (elementTime < hour) {
   $(this).attr('class', 'past').removeClass('future', 'present')
- 
-  console.log('past')
-  
-  }else if(elementTime > hour){
+  //  console.log('past')
+   }else if(elementTime > hour){
     $(this).attr('class', 'future').removeClass('present', "past")
-    console.log('future')
-  
-  }else{
+    // console.log('future')
+   }else{
     $(this).attr('class', 'present').removeClass('future', 'past')
-    console.log('present')
-   
-
-  }
-})
+    // console.log('present')
+   }})
 
 
 $('.time-block').on('click', ".saveBtn", function (e) {
