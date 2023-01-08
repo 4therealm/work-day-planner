@@ -4,53 +4,6 @@
 $(function () {
 
 
-const rootElement = $('.container-fluid') 
-let outGoingContainer = [
-  {time: "8AM", content: ""},
-  {time: "9AM", content: ""},
-  {time: "10AM", content: ""},
-  {time: "11AM", content: ""},
-  {time: "12AM", content: ""},
-  {time: "1PM", content: ""},
-  {time: "2PM", content: ""},
-  {time: "3PM", content: ""}
-];
-
-render()
-
-function render() {
-const  incomingContainer =JSON.parse ( localStorage.getItem ( "updatedSaves" ) ) || [];
-for (let i = 0; i < incomingContainer.length; i++) {
-  $('.time-block').eq(i).children().eq(1).val(incomingContainer[i].content); 
-}
-console.log(incomingContainer)
-
-}
-
-
-
-
-$('.time-block').on('click','.saveBtn', function (e) {
-  e.preventDefault()
-  var text =  $(this).parent().children().eq(1).val()
-  var savedHour =  $(this).parent().children().eq(0).text()
-
-  let time_block ={time: savedHour, content: text}
-
-updateOutgoing(time_block)
-console.log(savedHour)
-  
-  // console.log("information saved")
-
-})
-
-function updateOutgoing(newObj){
-  const index = outGoingContainer.findIndex((obj) => obj.time === newObj.time)
-outGoingContainer[index] = newObj
-outGoingContainer.splice(index, 1, newObj)
-  localStorage.setItem('updatedSaves', JSON.stringify(outGoingContainer))
-console.log(outGoingContainer)
-}
 
 
 

@@ -12,6 +12,9 @@ textarea {
   border-left: 1px solid black;
   padding: 10px;
 }
+header p{
+  color: #d3d3d3;
+}
 
 .description {
   white-space: pre-wrap;
