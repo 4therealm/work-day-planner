@@ -7,7 +7,7 @@ Create a simple calendar application that allows a user to save events for each 
 * deployed: https://4therealm.github.io/work-day-planner/    
 * repo: https://github.com/4therealm/work-day-planner  
 * Photo
-![screenshot of the application](https://file%2B.vscode-resource.vscode-cdn.net/c%3A/Users/thors/bootcamp/homework/work-day-planner/work-day-planner.png?version%3D1673300364863)
+<img src="work-day-planner.png" alt="an image of the application">
 
 ## User Story
 AS AN employee with a busy schedule
